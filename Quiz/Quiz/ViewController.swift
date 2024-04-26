@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.label.text = "Hello"
+        
+        var str = ""
+        str = "Hello Swift"
+        self.label.text = str
+        
+        
     }
     
     
