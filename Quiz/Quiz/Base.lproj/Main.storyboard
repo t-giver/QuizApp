@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUS-fZ-lzx">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HZQ-Tp-ny1">
+            <objects>
+                <navigationController id="zUS-fZ-lzx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DIc-bu-Dc7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oxt-Lf-RxP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5My-pC-btY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1155" y="4"/>
+        </scene>
         <!--最初の画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -30,6 +46,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNI-pU-Mkn"/>
+                                    <segue destination="Qq5-Iz-Ymk" kind="show" id="rBT-JA-qFP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqJ-SB-UVX">
@@ -64,8 +81,10 @@
                             <constraint firstItem="NqJ-SB-UVX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ufN-su-B1p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JQQ-bG-LcZ"/>
                     <connections>
                         <outlet property="label" destination="NqJ-SB-UVX" id="20U-wK-G6Q"/>
+                        <outlet property="nameTextField" destination="ofq-IQ-4Kg" id="qsk-VJ-pTv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +94,7 @@
         <!--クイズ画面-->
         <scene sceneID="k58-Vg-4Xk">
             <objects>
-                <viewController title="クイズ画面" id="Qq5-Iz-Ymk" sceneMemberID="viewController">
+                <viewController title="クイズ画面" id="Qq5-Iz-Ymk" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIk-uN-YFf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,6 +156,10 @@
                             <constraint firstItem="nWO-Nh-mu7" firstAttribute="centerY" secondItem="aIk-uN-YFf" secondAttribute="centerY" id="v3p-uY-l4Y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jPh-91-aaW"/>
+                    <connections>
+                        <outlet property="label" destination="rcm-hm-mDc" id="9MA-dD-98O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urj-oP-igT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
