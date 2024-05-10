@@ -21,10 +21,12 @@ class QuizManager {
         quizzes = []
         quizzes.append(Quiz(text: "人間を超でっかいネコだと思っている？",correctAnswer: true, imageName:"cat"))
         quizzes.append(Quiz(text: "イヌは食べ物のおいしさを味よりも匂いで判断している？",correctAnswer: true, imageName: "dog"))
-        quizzes.append(Quiz(text: "虎のしましま模様は皮膚までつながっていない？", correctAnswer: false, imageName: "tiger"))
+        quizzes.append(Quiz(text: "虎のしましま模様は皮膚までつながっていない？", correctAnswer: true, imageName: "tiger"))
         quizzes.append(Quiz(text: "クマは走る時に全部の足がバラバラにうごいてる？", correctAnswer: true, imageName: "bear"))
-        quizzes.append(Quiz(text: "パンダのいちばんの好物は笹である？", correctAnswer: false, imageName: "panda"))
-        
+        quizzes.append(Quiz(text: "パンダのいちばんの好物は笹である？", correctAnswer: true, imageName: "panda"))
+        quizzes.append(Quiz(text: "パンダは白黒である？", correctAnswer: true, imageName: "panda"))
+        quizzes.append(Quiz(text: "イヌは４足歩行である？", correctAnswer: true, imageName: "dog"))
+
         currentIndex = 0
         score = 0
         status = .inAnsewr
@@ -49,6 +51,8 @@ class QuizManager {
         }
         
     }
+    
+  
     
     
 }
