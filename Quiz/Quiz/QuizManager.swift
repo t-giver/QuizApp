@@ -11,12 +11,13 @@ class QuizManager {
     var quizzes: [Quiz]
     var currentIndex: Int
     var score: Int
+    var status: Status
     
     enum Status {
         case inAnsewr
         case done
     }
-    var status: Status
+    
     init() {
         quizzes = []
         quizzes.append(Quiz(text: "人間を超でっかいネコだと思っている？",correctAnswer: true, imageName:"cat"))
@@ -26,7 +27,7 @@ class QuizManager {
         quizzes.append(Quiz(text: "パンダのいちばんの好物は笹である？", correctAnswer: true, imageName: "panda"))
         quizzes.append(Quiz(text: "パンダは白黒である？", correctAnswer: true, imageName: "panda"))
         quizzes.append(Quiz(text: "イヌは４足歩行である？", correctAnswer: true, imageName: "dog"))
-
+        
         currentIndex = 0
         score = 0
         status = .inAnsewr
@@ -49,10 +50,9 @@ class QuizManager {
         } else{
             status = .done
         }
-        
     }
     
-  
+    
     
     
 }

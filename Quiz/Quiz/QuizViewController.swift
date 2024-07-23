@@ -93,7 +93,6 @@ class QuizViewController: UIViewController {
         
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultViewController: ResultViewController =
             segue.destination as? ResultViewController {

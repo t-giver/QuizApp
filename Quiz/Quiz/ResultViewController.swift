@@ -8,24 +8,22 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textView: UITextView!
-    
     var nameText: String = ""
     var score: Int = 0
-    
     let counts = QuizManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.label.text = "\(self.nameText)さん　あなたのスコアは\(self.score)です"
-        
+       result()
+    }
+    
+    func result(){
         let totalCount = counts.quizzes.count
-        
         var text = ""
+        self.label.text = "\(self.nameText)さん　あなたのスコアは\(self.score)です"
         switch self.score {
         case 0...2:
             text = "動物に関してあまり興味はないでしょうか？\n\nもっと頑張りましょう！"
@@ -39,12 +37,11 @@ class ResultViewController: UIViewController {
         self.textView.text = text
     }
     
-    
     @IBAction func pushResultButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     
     
-  
+    
 }
